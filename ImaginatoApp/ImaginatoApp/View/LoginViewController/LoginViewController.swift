@@ -33,6 +33,20 @@ class LoginViewController: UIViewController {
 }
 extension LoginViewController{
     func loginAPICall() {
-        viewModel.apiCall(self, params: <#T##[String : Any]#>, onCompletion: <#T##(() -> Void)?##(() -> Void)?##() -> Void#>)
+        let validation = Validation()
+        let fields: [InputFieldStyle] = [.email, .password]
+        var dictFields = [InputFieldStyle: Any]()
+        dictFields[.email] = self.emailTextField.text
+        dictFields[.password] = self.passwordTextField.text
+        do{
+            try validation.isValidFields(fields, data: dictFields)
+            viewModel.apiCall(self, params: ["email":validation.email ?? "", "password":validation.password ?? ""]) {
+            }
+        } catch{
+            if let validatedError = error as? ValidationError {
+                print(validatedError)
+                //show error message
+            }
+        }
     }
 }

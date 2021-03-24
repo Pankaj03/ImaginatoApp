@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2CF95EE2260B57E60091F556 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF95EE1260B57E60091F556 /* Validation.swift */; };
+		2CF95EE8260B64550091F556 /* String+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF95EE7260B64550091F556 /* String+Extention.swift */; };
 		88C8C344F8ABBAA13D1380F2 /* Pods_ImaginatoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 196C4E7CF58E8694B595B7F4 /* Pods_ImaginatoApp.framework */; };
 		AD40C342260B35A2002E462D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD40C341260B35A2002E462D /* AppDelegate.swift */; };
 		AD40C346260B35A2002E462D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD40C345260B35A2002E462D /* LoginViewController.swift */; };
@@ -22,6 +24,8 @@
 
 /* Begin PBXFileReference section */
 		196C4E7CF58E8694B595B7F4 /* Pods_ImaginatoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImaginatoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CF95EE1260B57E60091F556 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
+		2CF95EE7260B64550091F556 /* String+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extention.swift"; sourceTree = "<group>"; };
 		3EFB09996DEE65791E310C17 /* Pods-ImaginatoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImaginatoApp.debug.xcconfig"; path = "Target Support Files/Pods-ImaginatoApp/Pods-ImaginatoApp.debug.xcconfig"; sourceTree = "<group>"; };
 		7A54378D212A2942EFEA0C51 /* Pods-ImaginatoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImaginatoApp.release.xcconfig"; path = "Target Support Files/Pods-ImaginatoApp/Pods-ImaginatoApp.release.xcconfig"; sourceTree = "<group>"; };
 		AD40C33E260B35A2002E462D /* ImaginatoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImaginatoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,6 +54,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2CF95EE0260B57C90091F556 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AD40C34A260B35A5002E462D /* Assets.xcassets */,
+				AD40C34F260B35A5002E462D /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2CF95EE6260B643E0091F556 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2CF95EE7260B64550091F556 /* String+Extention.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		AD40C335260B35A2002E462D = {
 			isa = PBXGroup;
 			children = (
@@ -75,9 +96,9 @@
 				AD40C356260B39BC002E462D /* Model */,
 				AD40C358260B39D6002E462D /* View */,
 				AD40C357260B39CA002E462D /* ViewModel */,
-				AD40C34A260B35A5002E462D /* Assets.xcassets */,
 				AD40C35F260B3F6A002E462D /* APIManager */,
-				AD40C34F260B35A5002E462D /* Info.plist */,
+				2CF95EE6260B643E0091F556 /* Extensions */,
+				2CF95EE0260B57C90091F556 /* Resources */,
 			);
 			path = ImaginatoApp;
 			sourceTree = "<group>";
@@ -95,6 +116,7 @@
 			children = (
 				AD40C359260B3ED5002E462D /* UserModel.swift */,
 				AD40C365260B44F0002E462D /* LoginResponse.swift */,
+				2CF95EE1260B57E60091F556 /* Validation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -286,8 +308,10 @@
 				AD40C361260B3F80002E462D /* Services.swift in Sources */,
 				AD40C35E260B3F18002E462D /* LoginViewModel.swift in Sources */,
 				AD40C346260B35A2002E462D /* LoginViewController.swift in Sources */,
+				2CF95EE8260B64550091F556 /* String+Extention.swift in Sources */,
 				AD40C35A260B3ED5002E462D /* UserModel.swift in Sources */,
 				AD40C342260B35A2002E462D /* AppDelegate.swift in Sources */,
+				2CF95EE2260B57E60091F556 /* Validation.swift in Sources */,
 				AD40C366260B44F0002E462D /* LoginResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -434,7 +458,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = ImaginatoApp/Info.plist;
+				INFOPLIST_FILE = ImaginatoApp/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -452,7 +476,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = ImaginatoApp/Info.plist;
+				INFOPLIST_FILE = ImaginatoApp/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

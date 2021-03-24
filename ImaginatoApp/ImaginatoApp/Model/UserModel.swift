@@ -8,4 +8,6 @@
 
 import Foundation
 
-
+enum InputFieldStyle {
+    case email, password
+}
