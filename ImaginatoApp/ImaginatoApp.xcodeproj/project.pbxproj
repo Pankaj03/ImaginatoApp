@@ -13,6 +13,10 @@
 		AD40C349260B35A2002E462D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD40C347260B35A2002E462D /* Main.storyboard */; };
 		AD40C34B260B35A5002E462D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD40C34A260B35A5002E462D /* Assets.xcassets */; };
 		AD40C34E260B35A5002E462D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD40C34C260B35A5002E462D /* LaunchScreen.storyboard */; };
+		AD40C35A260B3ED5002E462D /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD40C359260B3ED5002E462D /* UserModel.swift */; };
+		AD40C35E260B3F18002E462D /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD40C35D260B3F18002E462D /* LoginViewModel.swift */; };
+		AD40C361260B3F80002E462D /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD40C360260B3F80002E462D /* Services.swift */; };
+		AD40C363260B3F92002E462D /* LoginApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD40C362260B3F92002E462D /* LoginApiManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		AD40C34A260B35A5002E462D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD40C34D260B35A5002E462D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AD40C34F260B35A5002E462D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD40C359260B3ED5002E462D /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		AD40C35D260B3F18002E462D /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		AD40C360260B3F80002E462D /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
+		AD40C362260B3F92002E462D /* LoginApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginApiManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,9 +73,8 @@
 				AD40C356260B39BC002E462D /* Model */,
 				AD40C358260B39D6002E462D /* View */,
 				AD40C357260B39CA002E462D /* ViewModel */,
-				AD40C347260B35A2002E462D /* Main.storyboard */,
 				AD40C34A260B35A5002E462D /* Assets.xcassets */,
-				AD40C34C260B35A5002E462D /* LaunchScreen.storyboard */,
+				AD40C35F260B3F6A002E462D /* APIManager */,
 				AD40C34F260B35A5002E462D /* Info.plist */,
 			);
 			path = ImaginatoApp;
@@ -84,6 +91,7 @@
 		AD40C356260B39BC002E462D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AD40C359260B3ED5002E462D /* UserModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -91,6 +99,7 @@
 		AD40C357260B39CA002E462D /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				AD40C35C260B3EFE002E462D /* LoginViewModel */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -98,9 +107,44 @@
 		AD40C358260B39D6002E462D /* View */ = {
 			isa = PBXGroup;
 			children = (
-				AD40C345260B35A2002E462D /* LoginViewController.swift */,
+				AD40C35B260B3EED002E462D /* LoginViewController */,
+				AD40C347260B35A2002E462D /* Main.storyboard */,
+				AD40C34C260B35A5002E462D /* LaunchScreen.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		AD40C35B260B3EED002E462D /* LoginViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AD40C345260B35A2002E462D /* LoginViewController.swift */,
+			);
+			path = LoginViewController;
+			sourceTree = "<group>";
+		};
+		AD40C35C260B3EFE002E462D /* LoginViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AD40C35D260B3F18002E462D /* LoginViewModel.swift */,
+			);
+			path = LoginViewModel;
+			sourceTree = "<group>";
+		};
+		AD40C35F260B3F6A002E462D /* APIManager */ = {
+			isa = PBXGroup;
+			children = (
+				AD40C360260B3F80002E462D /* Services.swift */,
+				AD40C364260B3F98002E462D /* LoginApiManager */,
+			);
+			path = APIManager;
+			sourceTree = "<group>";
+		};
+		AD40C364260B3F98002E462D /* LoginApiManager */ = {
+			isa = PBXGroup;
+			children = (
+				AD40C362260B3F92002E462D /* LoginApiManager.swift */,
+			);
+			path = LoginApiManager;
 			sourceTree = "<group>";
 		};
 		D67CBC275B34C615868B3E0E /* Frameworks */ = {
@@ -235,7 +279,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD40C363260B3F92002E462D /* LoginApiManager.swift in Sources */,
+				AD40C361260B3F80002E462D /* Services.swift in Sources */,
+				AD40C35E260B3F18002E462D /* LoginViewModel.swift in Sources */,
 				AD40C346260B35A2002E462D /* LoginViewController.swift in Sources */,
+				AD40C35A260B3ED5002E462D /* UserModel.swift in Sources */,
 				AD40C342260B35A2002E462D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

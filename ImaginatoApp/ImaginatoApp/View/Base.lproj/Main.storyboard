@@ -56,6 +56,9 @@
                                                     <rect key="frame" x="0.0" y="120" width="374" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <state key="normal" title="Login"/>
+                                                    <connections>
+                                                        <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bpl-Sf-2qV"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -76,6 +79,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Login" id="owf-Ei-veU"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="U5y-sJ-osb" id="z2O-01-CSE"/>
+                        <outlet property="passwordTextField" destination="h1U-py-8Vd" id="iVI-C9-gIs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
