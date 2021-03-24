@@ -3,14 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		88C8C344F8ABBAA13D1380F2 /* Pods_ImaginatoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 196C4E7CF58E8694B595B7F4 /* Pods_ImaginatoApp.framework */; };
 		AD40C342260B35A2002E462D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD40C341260B35A2002E462D /* AppDelegate.swift */; };
-		AD40C344260B35A2002E462D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD40C343260B35A2002E462D /* SceneDelegate.swift */; };
-		AD40C346260B35A2002E462D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD40C345260B35A2002E462D /* ViewController.swift */; };
+		AD40C346260B35A2002E462D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD40C345260B35A2002E462D /* LoginViewController.swift */; };
 		AD40C349260B35A2002E462D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD40C347260B35A2002E462D /* Main.storyboard */; };
 		AD40C34B260B35A5002E462D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD40C34A260B35A5002E462D /* Assets.xcassets */; };
 		AD40C34E260B35A5002E462D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD40C34C260B35A5002E462D /* LaunchScreen.storyboard */; };
@@ -22,8 +21,7 @@
 		7A54378D212A2942EFEA0C51 /* Pods-ImaginatoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImaginatoApp.release.xcconfig"; path = "Target Support Files/Pods-ImaginatoApp/Pods-ImaginatoApp.release.xcconfig"; sourceTree = "<group>"; };
 		AD40C33E260B35A2002E462D /* ImaginatoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImaginatoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD40C341260B35A2002E462D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AD40C343260B35A2002E462D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AD40C345260B35A2002E462D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AD40C345260B35A2002E462D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		AD40C348260B35A2002E462D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AD40C34A260B35A5002E462D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD40C34D260B35A5002E462D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -63,15 +61,46 @@
 		AD40C340260B35A2002E462D /* ImaginatoApp */ = {
 			isa = PBXGroup;
 			children = (
-				AD40C341260B35A2002E462D /* AppDelegate.swift */,
-				AD40C343260B35A2002E462D /* SceneDelegate.swift */,
-				AD40C345260B35A2002E462D /* ViewController.swift */,
+				AD40C355260B39AD002E462D /* Application */,
+				AD40C356260B39BC002E462D /* Model */,
+				AD40C358260B39D6002E462D /* View */,
+				AD40C357260B39CA002E462D /* ViewModel */,
 				AD40C347260B35A2002E462D /* Main.storyboard */,
 				AD40C34A260B35A5002E462D /* Assets.xcassets */,
 				AD40C34C260B35A5002E462D /* LaunchScreen.storyboard */,
 				AD40C34F260B35A5002E462D /* Info.plist */,
 			);
 			path = ImaginatoApp;
+			sourceTree = "<group>";
+		};
+		AD40C355260B39AD002E462D /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				AD40C341260B35A2002E462D /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		AD40C356260B39BC002E462D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AD40C357260B39CA002E462D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AD40C358260B39D6002E462D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AD40C345260B35A2002E462D /* LoginViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		D67CBC275B34C615868B3E0E /* Frameworks */ = {
@@ -88,7 +117,6 @@
 				3EFB09996DEE65791E310C17 /* Pods-ImaginatoApp.debug.xcconfig */,
 				7A54378D212A2942EFEA0C51 /* Pods-ImaginatoApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -207,9 +235,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD40C346260B35A2002E462D /* ViewController.swift in Sources */,
+				AD40C346260B35A2002E462D /* LoginViewController.swift in Sources */,
 				AD40C342260B35A2002E462D /* AppDelegate.swift in Sources */,
-				AD40C344260B35A2002E462D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
